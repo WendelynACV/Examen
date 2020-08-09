@@ -23,11 +23,12 @@
     <br><br>
     <h2>Por favor registrese</h2>
     <br><br>
-    <form action="${pageContext.request.contextPath}/registrarProveedor" method="post" enctype="multipart/form-data">
+    <form action="${pageContext.request.contextPath}/registrarCliente" method="post" enctype="multipart/form-data">
 
         Nombre del Perro: <input maxlength="120" align="center" type="text" name="nombreDelPerro" width="30" required/><br><br>
         Cedula del Cliente: <input maxlength="12" type="text" name="cedula" width="25" pattern="[0][1-9]-?\d{4}-?\d{4}|(3(?:-))((?:[0-9]{3}-))((?:[0-9]{6}$))" required/> (para cédula de identidad el formato es: '0#-####-####' y para jurídica: '3-###-######') <br><br>
-
+        Raza del Perro: <input maxlength="50" align="center" type="text" name="razaDelPerro" width="30" required/><br>
+        Alergias: <input maxlength="50" align="center" type="text" name="alergias" width="30" required/><br>
         <input align="center" type="submit" value="Registrar"/>
         <br><br>
     </form>
