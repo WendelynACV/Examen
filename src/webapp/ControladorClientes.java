@@ -24,10 +24,14 @@ public class ControladorClientes extends HttpServlet {
 
         String nombreDelPerro = request.getParameter("nombreDelPerro");
         String cedula = request.getParameter("cedula");
+        String fechaDeUltimoCorte = request.getParameter("fechaDeUltimoCorte");
 
-        Cliente cliente = new Cliente(nombreDelPerro, cedula, false, "");
+        Cliente cliente = new Cliente(nombreDelPerro, cedula, false, fechaDeUltimoCorte);
         clientes.agregarCliente(cliente);
         request.getSession().setAttribute("clientes", clientes);
+
+        request.getSession().setAttribute("msgDeError", "El cliente se agrego exitosamente");
+        request.getRequestDispatcher("/registrar.jsp").forward(request, response);
     }
 
     @Override

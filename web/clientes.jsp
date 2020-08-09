@@ -34,6 +34,8 @@
     <div>
         <h3><%=cliente.getNombreDelPerro()%></h3>
         <p><%=cliente.getCedulaCliente()%></p>
+        <p><%=cliente.isRequiereTransporte()%></p>
+        <p><%=cliente.getFechaUltimoCorte()%></p>
 
     </div>
 
@@ -42,5 +44,6 @@
         }
 
     %>
+    <a href="${pageContext.request.contextPath}/index.jsp">Regresar a inicio</a>
 </body>
 </html>
